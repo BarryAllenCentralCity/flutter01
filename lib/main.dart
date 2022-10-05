@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,15 +14,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
+//    final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Name Generator',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Name Generator'),
         ),
-        body:const Center(
+        body: const Center(
           child: RandomWords()
+        ),
+        drawer: Drawer(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              const Text("About: ", textScaleFactor: 1.5, textAlign: TextAlign.center,),
+              const Text("Learned from Codelabs by google and Book Flutter for Dummies by Barry Burd", textScaleFactor: 1.5,),
+              const Text("\n", textScaleFactor: 0.2,),
+              Image.asset('img.png'),
+              const Text("\n", textScaleFactor: 0.2,),
+              Image.asset('img_1.png'),
+              const Text("This app geneates random two word names that you can add to favorites, work is still going on for permanently saving\n Thanks: Adit", textScaleFactor: 1.1,)
+        ]
+        ),
         ),
       ),
     );
@@ -44,7 +59,7 @@ class _RandomWordsState extends State<RandomWords> {
 
   @override
     Widget build(BuildContext context) {
-      final wordPair = WordPair.random();
+//      final wordPair = WordPair.random();
       return ListView.builder(
         padding: const EdgeInsets.all(16.0),
         itemBuilder: /*1*/ (context, i) {
