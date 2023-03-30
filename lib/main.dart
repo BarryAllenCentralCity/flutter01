@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
               const Text("About: ", textScaleFactor: 1.5, textAlign: TextAlign.center,),
               const Text("Learned from Codelabs by google and Book Flutter for Dummies by Barry Burd", textScaleFactor: 1.5,),
               const Text("\n", textScaleFactor: 0.2,),
-              Image.asset('img.png'),
+              Image.asset('assets/img.png'),
               const Text("\n", textScaleFactor: 0.2,),
-              Image.asset('img_1.png'),
+              Image.asset('assets/img_1.png'),
               const Text("This app geneates random two word names that you can add to favorites, work is still going on for permanently saving\n Thanks: Adit", textScaleFactor: 1.1,)
         ]
         ),
